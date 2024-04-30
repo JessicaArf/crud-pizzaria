@@ -19,7 +19,7 @@ public class Pizza {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPizza;
+    private long idPizza;
     private String nome;
     private float precoBase;
     private boolean personalizada;

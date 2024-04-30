@@ -11,12 +11,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "TB_FORNADA")
 public class Fornada {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idFornada;
-    private Integer numFornada;
-    private Integer qtdPizzas;
+    private Long idFornada;
+    private int numFornada;
+    private int qtdPizzas;
 
 }

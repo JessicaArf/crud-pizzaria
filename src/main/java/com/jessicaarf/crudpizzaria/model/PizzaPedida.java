@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "TB_PIZZA_PEDIDA")
 public class PizzaPedida {
 
     @Id

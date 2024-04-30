@@ -11,11 +11,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "TB_TAMANHO")
 public class Tamanho {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idTamanho;
+    private Long idTamanho;
     private String nome;
     private float desconto;
 

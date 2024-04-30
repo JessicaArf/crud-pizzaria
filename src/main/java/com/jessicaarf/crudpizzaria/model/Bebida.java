@@ -16,7 +16,7 @@ public class Bebida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idBebida;
+    private Long idBebida;
     private String nome;
     private float preco;
 
