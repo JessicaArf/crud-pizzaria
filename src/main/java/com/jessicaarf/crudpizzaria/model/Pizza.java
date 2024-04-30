@@ -1,0 +1,34 @@
+package com.jessicaarf.crudpizzaria.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
+
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "TB_PIZZA")
+public class Pizza {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idPizza;
+    private String nome;
+    private float precoBase;
+    private boolean personalizada;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "PizzaPedida_has_ingrediente",
+            joinColumns = @JoinColumn(name = "idPizzaPedida"),
+            inverseJoinColumns = @JoinColumn(name = "idIngrediente")
+    )
+    private List<Ingrediente> ingredientes;
+}
