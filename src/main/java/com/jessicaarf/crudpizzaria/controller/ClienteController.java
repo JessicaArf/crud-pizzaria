@@ -1,6 +1,7 @@
 package com.jessicaarf.crudpizzaria.controller;
 
-import com.jessicaarf.crudpizzaria.model.Cliente;
+import com.jessicaarf.crudpizzaria.dtos.ClienteDTO;
+import com.jessicaarf.crudpizzaria.dtos.ClienteRespostaDTO;
 import com.jessicaarf.crudpizzaria.service.ClienteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -12,33 +13,32 @@ import java.util.List;
 @RestController
 @RequestMapping("/clientes")
 @RequiredArgsConstructor
-public class ClientController {
+public class ClienteController {
 
     private final ClienteService clienteService;
 
     @PostMapping
-    public ResponseEntity<Cliente> criarCliente(@RequestBody Cliente cliente) {
-        clienteService.criarCliente(cliente);
+    public ResponseEntity<ClienteRespostaDTO> criarCliente(@RequestBody ClienteDTO clienteDto) {
+        ClienteRespostaDTO cliente = clienteService.criarCliente(clienteDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(cliente);
-
     }
 
     @GetMapping
-    public ResponseEntity<List<Cliente>> exibirClientes() {
-        List<Cliente> clientes = clienteService.exibirClientes();
+    public ResponseEntity<List<ClienteRespostaDTO>> exibirClientes() {
+        List<ClienteRespostaDTO> clientes = clienteService.exibirClientes();
         return ResponseEntity.status(HttpStatus.OK).body(clientes);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cliente> exibirClientePorId(@PathVariable Long id) {
-        Cliente cliente = clienteService.exibirClientePorId(id);
+    public ResponseEntity<ClienteRespostaDTO> exibirClientePorId(@PathVariable Long id) {
+        ClienteRespostaDTO cliente = clienteService.exibirClientePorId(id);
         return ResponseEntity.status(HttpStatus.OK).body(cliente);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizarCliente(@PathVariable Long id, @RequestBody Cliente cliente) {
-        Cliente clienteDb = clienteService.atualizarCliente(cliente);
-        return ResponseEntity.status(HttpStatus.OK).body(cliente);
+    public ResponseEntity<ClienteRespostaDTO> atualizarCliente(@PathVariable Long id, @RequestBody ClienteDTO clienteDto) {
+        ClienteRespostaDTO clienteDb = clienteService.atualizarCliente(id, clienteDto);
+        return ResponseEntity.status(HttpStatus.OK).body(clienteDb);
     }
 
     @DeleteMapping("/{id}")
