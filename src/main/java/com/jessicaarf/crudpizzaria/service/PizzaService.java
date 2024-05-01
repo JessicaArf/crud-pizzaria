@@ -1,7 +1,6 @@
 package com.jessicaarf.crudpizzaria.service;
 
 import com.jessicaarf.crudpizzaria.dtos.PizzaDTO;
-import com.jessicaarf.crudpizzaria.model.Ingrediente;
 import com.jessicaarf.crudpizzaria.model.Pizza;
 import com.jessicaarf.crudpizzaria.repositories.PizzaRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -13,7 +12,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
