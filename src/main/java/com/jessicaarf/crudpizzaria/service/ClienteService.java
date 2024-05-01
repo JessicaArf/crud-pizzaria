@@ -55,7 +55,6 @@ public class ClienteService {
     }
 
     public ClienteRespostaDTO atualizarCliente(Long id, ClienteDTO clienteDto) {
-        // Busca o cliente no banco de dados pelo id
         Cliente clienteDb = clienteRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
 
@@ -63,9 +62,8 @@ public class ClienteService {
         clienteDb.setEndereco(clienteDto.getEndereco());
         clienteDb.setSenha(clienteDto.getSenha());
 
-        clienteDb = clienteRepository.save(clienteDb);
+        clienteRepository.save(clienteDb);
 
-        // Retorna o DTO de resposta com as informações atualizadas
         return modelMapper.map(clienteDb, ClienteRespostaDTO.class);
     }
 

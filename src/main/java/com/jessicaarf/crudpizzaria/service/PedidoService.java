@@ -1,7 +1,5 @@
 package com.jessicaarf.crudpizzaria.service;
 
-import com.jessicaarf.crudpizzaria.dtos.BebidaDTO;
-import com.jessicaarf.crudpizzaria.dtos.ClienteRespostaDTO;
 import com.jessicaarf.crudpizzaria.dtos.PedidoDTO;
 import com.jessicaarf.crudpizzaria.dtos.PedidoRespostaDTO;
 import com.jessicaarf.crudpizzaria.model.*;

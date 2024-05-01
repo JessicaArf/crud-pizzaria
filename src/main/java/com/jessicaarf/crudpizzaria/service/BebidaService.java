@@ -57,7 +57,7 @@ public class BebidaService {
         bebidaDb.setNome(bebidaDto.getNome());
         bebidaDb.setPreco(bebidaDto.getPreco());
 
-        bebidaDb = bebidaRepository.save(bebidaDb);
+        bebidaRepository.save(bebidaDb);
 
         return modelMapper.map(bebidaDb, BebidaDTO.class);
     }

@@ -59,7 +59,7 @@ public class PizzaService {
         pizzaDb.setPersonalizada(pizzaDto.isPersonalizada());
         pizzaDb.setIngredientes(pizzaDto.getIngredientes());
 
-        pizzaDb = pizzaRepository.save(pizzaDb);
+        pizzaRepository.save(pizzaDb);
 
         return modelMapper.map(pizzaDb, PizzaDTO.class);
     }
