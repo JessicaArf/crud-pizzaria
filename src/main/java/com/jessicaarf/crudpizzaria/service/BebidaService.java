@@ -1,12 +1,7 @@
 package com.jessicaarf.crudpizzaria.service;
 
 import com.jessicaarf.crudpizzaria.dtos.BebidaDTO;
-import com.jessicaarf.crudpizzaria.dtos.ClienteDTO;
-import com.jessicaarf.crudpizzaria.dtos.ClienteRespostaDTO;
-import com.jessicaarf.crudpizzaria.dtos.PizzaDTO;
 import com.jessicaarf.crudpizzaria.model.Bebida;
-import com.jessicaarf.crudpizzaria.model.Cliente;
-import com.jessicaarf.crudpizzaria.model.Pizza;
 import com.jessicaarf.crudpizzaria.repositories.BebidaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

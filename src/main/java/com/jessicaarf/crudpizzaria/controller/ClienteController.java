@@ -3,6 +3,7 @@ package com.jessicaarf.crudpizzaria.controller;
 import com.jessicaarf.crudpizzaria.dtos.ClienteDTO;
 import com.jessicaarf.crudpizzaria.dtos.ClienteRespostaDTO;
 import com.jessicaarf.crudpizzaria.service.ClienteService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class ClienteController {
     private final ClienteService clienteService;
 
     @PostMapping
-    public ResponseEntity<ClienteRespostaDTO> criarCliente(@RequestBody ClienteDTO clienteDto) {
+    public ResponseEntity<ClienteRespostaDTO> criarCliente(@RequestBody @Valid ClienteDTO clienteDto) {
         ClienteRespostaDTO cliente = clienteService.criarCliente(clienteDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(cliente);
     }
