@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,6 +23,6 @@ public class PizzaDTO {
     @NotNull(message = "O campo personalizada não pode ser nulo.")
     private boolean personalizada;
     @NotNull(message = "O campo ingrediente não pode ser nulo.")
-    private Ingrediente ingrediente;
+    private List<Ingrediente> ingredientes;
 
 }

@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -58,7 +59,7 @@ public class PizzaService {
         pizzaDb.setNome(pizzaDto.getNome());
         pizzaDb.setPrecoBase(pizzaDto.getPrecoBase());
         pizzaDb.setPersonalizada(pizzaDto.isPersonalizada());
-        pizzaDb.setIngredientes((List<Ingrediente>) pizzaDto.getIngrediente());
+        pizzaDb.setIngredientes(pizzaDto.getIngredientes());
 
         pizzaDb = pizzaRepository.save(pizzaDb);
 
