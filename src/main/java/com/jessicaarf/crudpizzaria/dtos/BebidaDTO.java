@@ -12,8 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class BebidaDTO {
     private Long idBebida;
-    @NotNull
+    @NotNull(message = "Nome não pode ser nulo.")
     private String nome;
-    @NotNull
+    @NotNull(message = "Preco não pode ser nulo.")
     private float preco;
 }

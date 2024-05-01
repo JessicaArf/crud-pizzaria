@@ -1,5 +1,6 @@
 package com.jessicaarf.crudpizzaria.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,10 +18,11 @@ public class BebidaPedida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idBebidaPedida;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "pedido_id")
+    @JsonBackReference
     private Pedido pedido;
 
     @ManyToOne(fetch = FetchType.EAGER)

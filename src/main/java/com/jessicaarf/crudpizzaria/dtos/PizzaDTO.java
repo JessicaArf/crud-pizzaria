@@ -16,13 +16,13 @@ import java.util.List;
 public class PizzaDTO {
 
     private int idPizza;
-    @NotNull(message = "O campo nome não pode ser nulo")
+    @NotNull(message = "Nome não pode ser nulo")
     private String nome;
-    @NotNull(message = "O campo precoBase não pode ser nulo.")
+    @NotNull(message = "PrecoBase não pode ser nulo.")
     private float precoBase;
-    @NotNull(message = "O campo personalizada não pode ser nulo.")
+    @NotNull(message = "Personalizada não pode ser nulo.")
     private boolean personalizada;
-    @NotNull(message = "O campo ingrediente não pode ser nulo.")
+    @NotNull(message = "Ingrediente não pode ser nulo.")
     private List<Ingrediente> ingredientes;
 
 }

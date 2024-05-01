@@ -1,5 +1,6 @@
 package com.jessicaarf.crudpizzaria.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,9 +32,11 @@ public class Pedido {
     Fornada fornada;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<PizzaPedida> pizzaPedidos;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<BebidaPedida> bebidaPedidos;
 
     @CreationTimestamp

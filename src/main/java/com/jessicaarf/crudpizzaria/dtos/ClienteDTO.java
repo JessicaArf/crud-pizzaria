@@ -14,19 +14,19 @@ public class ClienteDTO {
 
         private Long id;
 
-        @NotNull(message = "O campo nome não pode ser nulo.")
+        @NotNull(message = "Nome não pode ser nulo.")
         private String nome;
 
-        @NotNull(message = "O campo telefone não pode ser nulo.")
+        @NotNull(message = "Telefone não pode ser nulo.")
         private String telefone;
 
-        @NotNull(message = "O campo endereco não pode ser nulo.")
+        @NotNull(message = "Endereco não pode ser nulo.")
         private String endereco;
 
-        @NotNull(message = "O campo login não pode ser nulo.")
+        @NotNull(message = "Login não pode ser nulo.")
         private String login;
 
-        @NotNull(message = "O campo senha não pode ser nulo.")
+        @NotNull(message = "Senha não pode ser nulo.")
         private String senha;
 
 }
