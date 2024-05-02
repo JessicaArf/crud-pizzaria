@@ -24,7 +24,7 @@ public class Pizza {
     private float precoBase;
     private boolean personalizada;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "Pizza_has_ingrediente",
             joinColumns = @JoinColumn(name = "idPizza"),
