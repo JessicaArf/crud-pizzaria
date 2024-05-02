@@ -21,12 +21,12 @@ public class BebidaPedida {
     private Long idBebidaPedida;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "pedido_id")
+    @JoinColumn(name = "id_pedido")
     @JsonBackReference
     private Pedido pedido;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "bebida_id")
+    @JoinColumn(name = "id_bebida")
     private Bebida bebida;
 
     private int quantidade;

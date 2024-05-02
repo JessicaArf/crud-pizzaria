@@ -26,8 +26,8 @@ public class Pizza {
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
-            name = "PizzaPedida_has_ingrediente",
-            joinColumns = @JoinColumn(name = "idPizzaPedida"),
+            name = "Pizza_has_ingrediente",
+            joinColumns = @JoinColumn(name = "idPizza"),
             inverseJoinColumns = @JoinColumn(name = "idIngrediente")
     )
     private List<Ingrediente> ingredientes;

@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/fornadas")
 @RequiredArgsConstructor
 public class FornadaController {
 
     private final FornadaService fornadaService;
-
 
     @PostMapping
     public ResponseEntity<FornadaDTO> criarFornada(@RequestBody @Valid FornadaDTO fornadaDTO){

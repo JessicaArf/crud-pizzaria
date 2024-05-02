@@ -24,12 +24,12 @@ public class Pedido {
     private Long idPedido;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cliente_id")
-    Cliente cliente;
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "fornada_id")
-    Fornada fornada;
+    @JoinColumn(name = "id_fornada")
+    private Fornada fornada;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     @JsonManagedReference
@@ -40,6 +40,6 @@ public class Pedido {
     private List<BebidaPedida> bebidaPedidos;
 
     @CreationTimestamp
-    private Instant creationTimestamp;
+    private Instant dataHora;
 
 }

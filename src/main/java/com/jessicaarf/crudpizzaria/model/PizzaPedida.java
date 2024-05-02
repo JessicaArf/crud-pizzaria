@@ -25,11 +25,11 @@ public class PizzaPedida {
     private Pedido pedido;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "pizza_id")
+    @JoinColumn(name = "id_pizza")
     private Pizza pizza;
 
     @ManyToOne(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
-    @JoinColumn(name = "tamanho_id")
+    @JoinColumn(name = "id_tamanho")
     private Tamanho tamanho;
 
     private int quantidade;
