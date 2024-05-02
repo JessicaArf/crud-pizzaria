@@ -5,6 +5,7 @@ Desenvolva um projeto completo em Spring, seguindo o modelo entidade-relacioname
 
 Ao implementar os controllers, as operações CRUD (de pelo menos 4 entidades) devem ser adequadamente tratadas, permitindo o gerenciamento completo dos dados conforme definido no modelo ER
 
+![image](https://github.com/JessicaArf/crud-pizzaria/assets/106780748/606273ba-4541-422d-b798-87610f9e7fcb)
 
 ## Instalação
 
